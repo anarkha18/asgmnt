@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legacy</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+        crossorigin="anonymous"></script>
+    <style>
+        .star_rating {
+            user-select: none;
+        }
+
+        .star {
+            font-size: 3rem;
+            color: #f0b52bdf;
+            background-color: unset;
+            border: none;
+            cursor: pointer;
+        }
+
+        .star:hover {
+            cursor: pointer;
+        }
+
+        .share-btn-container {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            padding: 16px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            position: fixed;
+        }
+
+        .share-btn-container a i {
+            font-size: 32px;
+        }
+
+        .share-btn-container a {
+            margin: 12px 0;
+            transition: 500ms;
+        }
+
+        .share-btn-container a:hover {
+            transform: scale(1.2);
+        }
+
+        .share-btn-container .fa-facebook {
+            color: #3b5998;
+        }
+
+        .share-btn-container .fa-twitter {
+            color: #1da1f2;
+        }
+
+        .share-btn-container .fa-whatsapp {
+            color: #25d366;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="share-btn-container">
+        <a href="#" class="facebook-btn">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="#" class="twitter-btn">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <script src="share.js"></script>
+    </div>
+    <div class="container">
+        <h1 class="hd my-5">12 Monkeys: Legacy</h1>
+        <div class="my-3 text-justify">
+            Cole, Cassie, Hannah, and Jennifer splinter to Blackleaf, Montana in 1852. There, Hannah recognizes her
+            father Dr. Elliott Jones and the team learns that Elliott is working with the Pallid Man and the Army to
+            construct the main tower of Titan in Blackleaf. Hannah splinters back to 2043 with Elliott to the Project
+            Splinter facility where Elliott and Jones deduce that the Army plans to use the Titan to create a paradox to
+            destroy time and create the Red Forest. Cassie figures out that Jennifer has lost her "Primary" abilities.
+            Cole, Cassie, and Jennifer encounter Tihkoosue of the Siksika who tells them about a weapon that past
+            Primaries made to destroy the Witness. Despite Tihkoosue's warning, Jennifer takes a drink to speak to the
+            old Primaries about the weapon, revealing the team's time and location in Blackleaf to Olivia along with the
+            existence of the weapon. Elliott and Hannah splinter back to Blackleaf and the team devises a plan to
+            destroy the power cores for Titan. Olivia sends Deacon to Blackleaf and foils the plan. Before being killed
+            by Deacon, Elliott manages to steal the designs for Titan and give them to Hannah. The team splinters back
+            to the Project Splinter facility where Cole reveals that the story from his childhood about the weapon came
+            from Cole's mother. In the early development of Project Splinter's time machine, Elliott's assistant Emma is
+            revealed to be a member of the Army as well as Olivia's daughter. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Nam magni consectetur voluptates odio, suscipit sed id. Nesciunt, enim facilis assumenda
+            laborum eaque quasi sapiente sit minima ipsum autem corporis expedita accusantium aperiam omnis quod, iste
+            placeat! Culpa vero labore suscipit.
+        </div>
+        <div><a href="home.html"><button type="button" class="btn btn-primary">GO Home</button></a>
+        </div>
+        <h3 class="my-3">Rate Us</h3>
+        <div class="my-3 star_rating">
+            <h6>How was your experiance?</h6>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <button class="star">&#9734;</button>
+            <p class="rating mx-2">0 of 5</p>
+        </div>
+        <script>
+            const allstarts = document.querySelectorAll('.star');
+            // console.log(allstarts);
+            let current_rate = document.querySelector('.rating');
+            allstarts.forEach((star, i) => {
+                star.onclick = function () {
+                    // console.log(star);
+                    // console.log(i + 1)
+                    let current_star = i + 1;
+                    current_rate.innerText = current_star + ' of 5';
+                    // console.log(current_star);
+                    allstarts.forEach((star, j) => {
+                        // console.log(j + 1);
+                        if (current_star >= j + 1) {
+                            star.innerHTML = '&#9733';
+                        } else {
+                            star.innerHTML = '&#9734';
+                        }
+
+                    })
+                }
+            })
+
+        </script>
+    </div>
+</body>
+
+</html>

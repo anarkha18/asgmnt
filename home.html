@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand mx-3" href="#"><img
+        src="https://cdn.logojoy.com/wp-content/uploads/2018/05/30164225/572-768x591.png" alt="" width="50" hight="30"
+        class="rounded-circle"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">About</a>
+        </li>
+        <li class="nav-item">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary " data-toggle="modal" data-target="#signup">
+            Sign Up
+          </button>
+        </li>
+        <li class="nav-item mx-2">
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-success " data-toggle="modal" data-target="#login">
+            Log In
+          </button>
+        </li>
+      </ul>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="signup" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form action="#" method="POST">
+
+                <div class="form-group">
+                  <label for="fn">First Name: </label>
+                  <input type="text" class="form-control" id="fn" name="fname" placeholder="Enter First Name">
+                  <span id="fninvalid"></span>
+
+                </div>
+                <div class="form-group">
+
+                  <label for="ln">Last Name: </label>
+                  <input type="text" class="form-control" id="ln" name="lname" placeholder="Enter Last Name">
+                  <span id="lninvalid"></span>
+                </div>
+                <div class="form-group">
+
+                  <label for="em">Email: </label>
+                  <input type="email" id="em" class="form-control" name="email" placeholder="Email Address">
+                  <span id="eminvalid"></span>
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone: </label>
+                  <input type="text" id="phone" class="form-control" name="phone" placeholder="Phone Number">
+                  <span id="pher"></span>
+
+                </div>
+                <div class="form-group">
+
+
+                  <label for="un">User Name: </label>
+                  <input type="email" class="form-control" id="un" name="username" placeholder="Enter User Name">
+                  <span id="uninvalid"></span>
+                </div>
+                <div class="form-group">
+
+                  <label for="password">Password</label>
+                  <input type="password" name="password" class="form-control" id="pas" placeholder="Password">
+                  <span id="pasinvalid"></span>
+                </div>
+                <div class="form-group">
+                  <button type="button" id="submitbtn" class="btn btn-primary my-3">Register</button>
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                </div>
+                <script src="reg.js"></script>
+
+
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="login" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Log In</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <form method="post" action="#">
+
+                <div class="form-group">
+                  <label for="username">User Name: </label>
+                  <input type="email" class="form-control" id="usn" name="loginusername" aria-describedby="emailHelp"
+                    placeholder="Enter User Name" required>
+                  <span id="usninvalid"></span>
+
+                </div>
+                <div class="form-group">
+                  <label for="password">Password</label>
+                  <input type="password" name="loginpassword" class="form-control" id="pasl" placeholder="Password"
+                    required>
+                  <span id="paslinvalid"></span>
+                </div>
+                <!-- <a class="btn btn-outline-dark" href="https://accounts.google.com/ServiceLogin" role="button"
+                  style="text-transform:none">
+                  <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in"
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+                  Login with Google
+                </a> -->
+                <button type="button" id="loginbtn" class="btn btn-primary">Log In</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <script src="login.js"></script>
+              </form>
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+  </nav>
+  <div class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">Welcome to Blognotes!!</h1>
+      <p class="lead">Read and enjoy our blogs</p>
+    </div>
+  </div>
+  <div class="container">
+    <h1>Latest Blogs</h1>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="img4.jpg" class="card-img-top" alt="..." height="300">
+          <div class="card-header">
+            <a href="oroborous.html">
+              <h4>12 Monkeys : Ouroboros</h4>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">In 2043, the Cole, Cassie, and Jones of 2046 infiltrate the temporal facility...</p>
+            <a href="oroborous.html"><button type="button" class="btn btn-primary">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="img3.jpg" class="card-img-top" alt="..." height="300">
+          <div class="card-header">
+            <a href="rpm.html">
+              <h4>12 Monkeys : 45RPM</h4>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">In 1971, teenaged Olivia has apparently abandoned the Army and is on the run...</p>
+            <a href="rpm.html"><button type="button" class="btn btn-primary">Read More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
+      <div class="col-md-6">
+        <div class="card">
+          <img src="img2.jpg" class="card-img-top" alt="..." height="300">
+          <div class="card-header">
+            <a href="legacy.html">
+              <h4>12 Monkeys : Legacy</h4>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">Cole, Cassie, Hannah, and Jennifer splinter to Blackleaf, Montana in 1852...</p>
+            <a href="legacy.html"><button type="button" class="btn btn-primary">Read More</button></a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <img src="img1.jpg" class="card-img-top" alt="..." height="300">
+          <div class="card-header">
+            <a href="theend.html">
+              <h4>12 Monkeys : The End</h4>
+            </a>
+          </div>
+          <div class="card-body">
+            <p class="card-text">In medieval times, a group of Primaries is burned alive by warriors. The sole surviving
+              Primary, a young girl...</p>
+            <a href="theend.html"><button type="button" class="btn btn-primary">Read More</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="bg-dark text-center" style="height: 150px;">
+    <p style="color: white;">All rights reserved &copy; 2022</p>
+  </footer>
+
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button> -->
+
+  <!-- Modal -->
+  <div class="modal" id="popupmo">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Log In or Sign Up</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signup" data-dismiss="modal">
+            Sign Up
+          </button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#login" data-dismiss="modal">
+            Log In
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="modal" id="log">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Log In</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>sdfhjkk</p>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+  <script>
+    $(window).on('load', function () {
+      // alert("ghjjhbf¿")
+      setTimeout(function () {
+        $('#popupmo').modal('show')
+      }, 3000);
+    });
+  </script>
+</body>
+
+</html>
